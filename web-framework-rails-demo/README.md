@@ -1,24 +1,42 @@
-# README
+# Rails Web 框架演示
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails 全栈 Web 框架的基础演示项目。
 
-Things you may want to cover:
+## 特性
 
-* Ruby version
+- 完整的 MVC 架构
+- 内置 ORM (Active Record)
+- 自动路由生成
+- 内置测试框架
+- 丰富的生成器
 
-* System dependencies
+## 快速开始
 
-* Configuration
+### 安装依赖
+```bash
+bundle install
+```
 
-* Database creation
+### 运行应用
+```bash
+rails server
+```
 
-* Database initialization
+访问 [http://localhost:3000](http://localhost:3000) 查看效果。
 
-* How to run the test suite
+## 项目结构
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+├── app/              # 应用代码
+│   ├── controllers/  # 控制器
+│   ├── models/       # 模型
+│   └── views/        # 视图
+├── config/           # 配置文件
+├── db/               # 数据库文件
+└── Gemfile           # 依赖管理
+```
 
-* Deployment instructions
+## 相关链接
 
-* ...
+- [Rails 官方网站](https://rubyonrails.org/)
+- [Rails 指南](https://guides.rubyonrails.org/)

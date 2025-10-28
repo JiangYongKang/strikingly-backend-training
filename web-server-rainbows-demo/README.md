@@ -1,12 +1,35 @@
-# Rainrows web server
-* [Rainrows](https://github.com/rosylilly/rainbows) 和 [Unicorn](https://github.com/defunkt/unicorn) 是同一个作者开发的。
-* Rainrows 和 Unicorn 的配置方式、启动方式、启动参数完全相同。
-* Rainrows 是多线程服务器、Unicorn 是多进程服务器。
-* 在多核服务器上需要开启多个 Rainrows 进程，服务器有多少个核，就开启多少个 worker 进程。
-* 每个 worker 又可以开启多个线程。
-* 能够同时处理的 IO 并发请求等于 workers * threads
+# Rainbows Web 服务器演示
 
-### 参考资料
-* [https://bogomips.org/rainbows/](https://bogomips.org/rainbows/)
-* [https://ruby-china.org/topics/10832](https://ruby-china.org/topics/10832)
-* [https://github.com/robbin/robbin_site/blob/master/config/rainbows.rb](https://github.com/robbin/robbin_site/blob/master/config/rainbows.rb)
+Rainbows 是多线程 Web 服务器，与 Unicorn 出自同一作者。
+
+## 特性
+
+- 多线程架构
+- 与 Unicorn 配置兼容
+- 支持多种并发模型
+- 高 IO 并发处理
+
+## 快速开始
+
+### 安装依赖
+```bash
+bundle install
+```
+
+### 运行应用
+```bash
+rainbows -c config/rainbows.rb
+```
+
+访问 [http://localhost:8080](http://localhost:8080) 查看效果。
+
+## 配置说明
+
+- 支持多种并发模型
+- 可配置线程和进程数量
+- 与 Unicorn 配置格式兼容
+
+## 相关链接
+
+- [Rainbows GitHub](https://github.com/rosylilly/rainbows)
+- [Rainbows 文档](https://bogomips.org/rainbows/)

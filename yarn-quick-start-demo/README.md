@@ -1,29 +1,46 @@
-# Yarn
-[Yarn](https://yarnpkg.com/zh-Hans/) 快速、可靠、安全的依赖管理。替代 `npm` 的选择。
+# Yarn 包管理器演示
 
-## 安装
-```zsh
-$ brew install yarn
-```
-```zsh
-$ yarn --version
+Yarn 是快速、可靠、安全的 JavaScript 包管理器，是 npm 的替代选择。
+
+## 特性
+
+- 快速安装依赖
+- 离线模式支持
+- 确定性依赖解析
+- 更好的安全性
+
+## 快速开始
+
+### 安装 Yarn
+```bash
+brew install yarn
 ```
 
-## 使用
-```zsh
-$ yarn add jquery
-yarn add v1.2.1
-info No lockfile found.
-[1/4] 🔍  Resolving packages...    # 图标样式真好看
-[2/4] 🚚  Fetching packages...
-[3/4] 🔗  Linking dependencies...
-[4/4] 📃  Building fresh packages...
-success Saved lockfile.
-success Saved 1 new dependency.
-└─ jquery@3.2.1
-✨  Done in 0.45s.
+### 初始化项目
+```bash
+yarn init
 ```
-```zsh
-$ yarn install
+
+### 安装依赖
+```bash
+yarn add jquery
 ```
-[https://yarnpkg.com/zh-Hans/](https://yarnpkg.com/zh-Hans/)
+
+### 安装所有依赖
+```bash
+yarn install
+```
+
+## 常用命令
+
+```bash
+yarn add <package>     # 添加依赖
+yarn remove <package>  # 移除依赖
+yarn install          # 安装所有依赖
+yarn upgrade          # 升级依赖
+```
+
+## 相关链接
+
+- [Yarn 官方网站](https://yarnpkg.com/)
+- [Yarn 文档](https://yarnpkg.com/docs/)

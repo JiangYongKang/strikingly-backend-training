@@ -1,24 +1,42 @@
-# README
+# Rails 邮件发送示例
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+演示如何在 Rails 应用中发送邮件。
 
-Things you may want to cover:
+## 特性
 
-* Ruby version
+- ActionMailer 邮件发送
+- 邮件模板支持
+- 异步邮件发送
+- 邮件预览功能
 
-* System dependencies
+## 快速开始
 
-* Configuration
+### 安装依赖
+```bash
+bundle install
+```
 
-* Database creation
+### 运行应用
+```bash
+rails server
+```
 
-* Database initialization
+### 发送邮件
+```bash
+rails console
+# 在控制台中执行邮件发送代码
+```
 
-* How to run the test suite
+## 项目结构
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+├── app/
+│   ├── mailers/      # 邮件发送器
+│   └── views/        # 邮件模板
+├── config/           # 配置文件
+└── Gemfile           # 依赖管理
+```
 
-* Deployment instructions
+## 相关链接
 
-* ...
+- [ActionMailer 指南](https://guides.rubyonrails.org/action_mailer_basics.html)

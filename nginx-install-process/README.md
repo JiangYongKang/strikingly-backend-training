@@ -1,58 +1,44 @@
-### 通过 `brew` 进行下载安装
-```zsh
-$ brew install nginx
-==> Downloading https://homebrew.bintray.com/bottles/nginx-1.12.1.sierra.bottle.tar.gz
-######################################################################## 100.0%
-==> Pouring nginx-1.12.1.sierra.bottle.tar.gz
-==> Caveats
-Docroot is: /usr/local/var/www
+# Nginx 安装配置指南
 
-The default port has been set in /usr/local/etc/nginx/nginx.conf to 8080 so that
-nginx can run without sudo.
+Nginx 是一个高性能的 Web 服务器和反向代理服务器。
 
-nginx will load all files in /usr/local/etc/nginx/servers/.
+## 特性
 
-To have launchd start nginx now and restart at login:
-  brew services start nginx
-Or, if you don't want/need a background service you can just run:
-  nginx
-==> Summary
-🍺  /usr/local/Cellar/nginx/1.12.1: 23 files, 1MB
+- 高性能、低内存占用
+- 反向代理和负载均衡
+- 静态文件服务
+- SSL/TLS 支持
+
+## 安装方法
+
+### 使用 Homebrew (macOS)
+```bash
+brew install nginx
 ```
 
-### 默认配置项
-根据以上的输出，我们可以得到以下有用的信息
-```shell
-# 服务器默认位置
-/usr/local/var/www
-
-# 默认的配置文件的位置
-/usr/local/etc/nginx/nginx.conf
-
-# 默认文件加载路径
-/usr/local/etc/nginx/servers/
-
-# 安装位置
-/usr/local/Cellar/nginx/1.12.1
+### 启动服务
+```bash
+brew services start nginx
+# 或
+nginx
 ```
 
-### 常用的命令
-```zsh
-$ nginx -s quit   # 退出
-$ nginx -s reload #重新加载
-$ nginx -t        #测试 nginx.conf 配置
+## 配置说明
+
+- 默认端口: 8080
+- 配置文件: `/usr/local/etc/nginx/nginx.conf`
+- 网站根目录: `/usr/local/var/www`
+- 服务器配置: `/usr/local/etc/nginx/servers/`
+
+## 常用命令
+
+```bash
+nginx -s quit    # 退出
+nginx -s reload  # 重新加载配置
+nginx -t         # 测试配置文件
 ```
 
-### 配置 `nginx`
-在安装位置创建 `conf` 目录，并建立一个软连接
-```zsh
-$ cd /usr/local/Cellar/nginx/1.12.1
-$ mkdir config
-$ cd config
-$ ln -s /usr/local/etc/nginx/nginx.conf nginx.conf
-$ ls -al
-total 8
-drwxr-xr-x   3 vincent  wheel  102 10 14 09:58 .
-drwxr-xr-x  13 vincent  wheel  442 10 14 09:55 ..
-lrwxr-xr-x   1 vincent  wheel   31 10 14 09:57 nginx.config -> /usr/local/etc/nginx/nginx.conf
-```
+## 相关链接
+
+- [Nginx 官方网站](https://nginx.org/)
+- [Nginx 文档](https://nginx.org/en/docs/)
